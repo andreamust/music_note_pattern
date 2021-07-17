@@ -1,0 +1,473 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/andreamust/music_note_pattern/schema"
+     xml:base="https://github.com/andreamust/music_note_pattern/schema"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:p0="http://ontologydesignpatterns.org/opla/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://github.com/andreamust/music_note_pattern/not">
+        <owl:imports rdf:resource="urn:absolute:purl.org/andreapoltronieri/schema"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrea Poltronieri</dc:creator>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</terms:license>
+        <rdfs:comment xml:lang="en">Music Note Pattern</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#belongsToSection -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#belongsToSection">
+        <owl:inverseOf rdf:resource="https://github.com/andreamust/music_note_pattern/schema#groupsNoteEvent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#belongsToVoice -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#belongsToVoice">
+        <owl:inverseOf rdf:resource="https://github.com/andreamust/music_note_pattern/schema#containsNoteEvent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#containsNoteEvent -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#containsNoteEvent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#groupsNoteEvent -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#groupsNoteEvent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#hasNoteDuration -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#hasNoteDuration">
+        <owl:inverseOf rdf:resource="https://github.com/andreamust/music_note_pattern/schema#isDurationOfNote"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+        <rdfs:range rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteDuration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#hasNoteDynamic -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#hasNoteDynamic">
+        <owl:inverseOf rdf:resource="https://github.com/andreamust/music_note_pattern/schema#isDynamicOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+        <rdfs:range rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteDynamic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#hasNotePitch -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#hasNotePitch">
+        <owl:inverseOf rdf:resource="https://github.com/andreamust/music_note_pattern/schema#isPitchOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+        <rdfs:range rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NotePitch"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#haveRealisation -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#haveRealisation">
+        <owl:inverseOf rdf:resource="https://github.com/andreamust/music_note_pattern/schema#isRealisationOf"/>
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#isAbstractionIOfEnvelope -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#isAbstractionIOfEnvelope"/>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#isAbstractionOfFrequency -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#isAbstractionOfFrequency">
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NotePitch"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#isApproximationOfDuration -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#isApproximationOfDuration">
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteDuration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#isApproximationOfIntensity -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#isApproximationOfIntensity">
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteDynamic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#isDurationOfNote -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#isDurationOfNote">
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteDuration"/>
+        <rdfs:range rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#isDynamicOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#isDynamicOf">
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteDynamic"/>
+        <rdfs:range rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#isPitchOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#isPitchOf">
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NotePitch"/>
+        <rdfs:range rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#isRealisationOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#isRealisationOf">
+        <rdfs:range rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#isSectionOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#isSectionOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#belongsToMeasure -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#belongsToMeasure">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The measure (expressed in bars) to which a note belongs in a music score.</rdfs:comment>
+        <rdfs:label xml:lang="en">has measure</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#hasAccidental -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#hasAccidental">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The accidental of a note (e.g. sharp).</rdfs:comment>
+        <rdfs:label xml:lang="en">has accidental</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#hasLiteralDynamic -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#hasLiteralDynamic">
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteDynamic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The dynamic expressed in a music score by means of adjectives (e.g. piano).</rdfs:comment>
+        <rdfs:label xml:lang="en">has literal dynamic</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#hasMidiPitch -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#hasMidiPitch">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NotePitch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The pitch of a note expressed by means of its MIDI number.</rdfs:comment>
+        <rdfs:label xml:lang="en">has midi pitch</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#hasMidiVelocity -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#hasMidiVelocity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteDynamic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The dynamics of the note expressed symbolically by means of the MIDI command &quot;velocity&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="en">has midi velocity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#isDefinedByOctave -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/andreamust/music_note_pattern/schema#isDefinedByOctave">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NotePitch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The octave on which the note is defined.</rdfs:comment>
+        <rdfs:label xml:lang="en">is defined by octave</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#A -->
+
+    <owl:Class rdf:about="https://github.com/andreamust/music_note_pattern/schema#A">
+        <rdfs:subClassOf rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#B"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#C"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#D"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#E"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#F"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#G"/>
+        <rdfs:label xml:lang="en">A</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#B -->
+
+    <owl:Class rdf:about="https://github.com/andreamust/music_note_pattern/schema#B">
+        <rdfs:subClassOf rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#C"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#D"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#E"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#F"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#G"/>
+        <rdfs:label xml:lang="en">B</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#C -->
+
+    <owl:Class rdf:about="https://github.com/andreamust/music_note_pattern/schema#C">
+        <rdfs:subClassOf rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#D"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#E"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#F"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#G"/>
+        <rdfs:label xml:lang="en">C</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#D -->
+
+    <owl:Class rdf:about="https://github.com/andreamust/music_note_pattern/schema#D">
+        <rdfs:subClassOf rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#E"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#F"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#G"/>
+        <rdfs:label xml:lang="en">D</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#E -->
+
+    <owl:Class rdf:about="https://github.com/andreamust/music_note_pattern/schema#E">
+        <rdfs:subClassOf rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#F"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#G"/>
+        <rdfs:label xml:lang="en">E</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#F -->
+
+    <owl:Class rdf:about="https://github.com/andreamust/music_note_pattern/schema#F">
+        <rdfs:subClassOf rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+        <owl:disjointWith rdf:resource="https://github.com/andreamust/music_note_pattern/schema#G"/>
+        <rdfs:label xml:lang="en">F</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#G -->
+
+    <owl:Class rdf:about="https://github.com/andreamust/music_note_pattern/schema#G">
+        <rdfs:subClassOf rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+        <rdfs:label xml:lang="en">G</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#NoteDuration -->
+
+    <owl:Class rdf:about="https://github.com/andreamust/music_note_pattern/schema#NoteDuration">
+        <rdfs:label xml:lang="en">Note Duration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#NoteDynamic -->
+
+    <owl:Class rdf:about="https://github.com/andreamust/music_note_pattern/schema#NoteDynamic">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/andreamust/music_note_pattern/schema#isDynamicOf"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/andreamust/music_note_pattern/schema#hasMidiVelocity"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/andreamust/music_note_pattern/schema#hasLiteralDynamic"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Note Dynamic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#NoteEvent -->
+
+    <owl:Class rdf:about="https://github.com/andreamust/music_note_pattern/schema#NoteEvent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/andreamust/music_note_pattern/schema#hasNoteDuration"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteDuration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/andreamust/music_note_pattern/schema#hasNoteDynamic"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteDynamic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/andreamust/music_note_pattern/schema#hasNotePitch"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NotePitch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/andreamust/music_note_pattern/schema#belongsToMeasure"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/andreamust/music_note_pattern/schema#hasAccidental"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Note Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/andreamust/music_note_pattern/schema#NotePitch -->
+
+    <owl:Class rdf:about="https://github.com/andreamust/music_note_pattern/schema#NotePitch">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/andreamust/music_note_pattern/schema#isPitchOf"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/andreamust/music_note_pattern/schema#NoteEvent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Note Pitch</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
