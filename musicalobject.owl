@@ -9,7 +9,7 @@
      xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://purl.org/andreapoltronieri/musicalobject/">
+    <owl:Ontology rdf:about="https://purl.org/andreapoltronieri/musicalobject">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrea Poltronieri (University of Bologna)</dc:creator>
         <dc:description xml:lang="en">The Musical Object pattern models the acoustic features of a music note played in an actual performance.</dc:description>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
@@ -129,8 +129,8 @@
         <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/musicalobject/isSoundIntensityOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
-        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
         <rdfs:label xml:lang="en">has sound intensity</rdfs:label>
     </owl:ObjectProperty>
     
@@ -175,8 +175,8 @@
 
     <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/isSoundIntensityOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
-        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
         <rdfs:label xml:lang="en">is sound intensity of</rdfs:label>
     </owl:ObjectProperty>
     
