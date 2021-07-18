@@ -61,6 +61,7 @@
         <notepattern:hasNoteDuration rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#f_duration"/>
         <notepattern:hasNoteDynamic rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#f_dynamic"/>
         <notepattern:hasNotePitch rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#f_pitch"/>
+        <notepattern:hasRealisation rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#f_recording"/>
         <notepattern:belongsToMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</notepattern:belongsToMeasure>
         <rdfs:label xml:lang="en">f5 note</rdfs:label>
     </owl:NamedIndividual>
@@ -93,6 +94,7 @@
         <musicalobject:hasFrequency rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#mo_freq_3"/>
         <musicalobject:hasFrequency rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#mo_freq_4"/>
         <musicalobject:hasSoundIntensity rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#mo_intensity"/>
+        <notepattern:isRealisationOf rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#f_note"/>
     </owl:NamedIndividual>
     
 
