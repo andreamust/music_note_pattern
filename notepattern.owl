@@ -13,7 +13,7 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://purl.org/andreapoltronieri/notepattern">
         <owl:imports rdf:resource="https://purl.org/andreapoltronieri/scorepart"/>
-        <owl:imports rdf:resource="https://purl.org/andreapoltronieri/musicalobject/"/>
+        <owl:imports rdf:resource="https://purl.org/andreapoltronieri/musicalobject"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrea Poltronieri</dc:creator>
         <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</terms:license>
         <rdfs:comment xml:lang="en">Music Note Pattern</rdfs:comment>
