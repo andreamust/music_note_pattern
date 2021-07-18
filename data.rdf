@@ -89,6 +89,7 @@
     <owl:NamedIndividual rdf:about="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#f_recording">
         <rdf:type rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
         <musicalobject:hasDuration rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#mo_duration"/>
+        <musicalobject:hasEnvelope rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#mo_envelope"/>
         <musicalobject:hasFrequency rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#mo_freq_1"/>
         <musicalobject:hasFrequency rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#mo_freq_2"/>
         <musicalobject:hasFrequency rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#mo_freq_3"/>
@@ -113,6 +114,7 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#mo_envelope">
         <rdf:type rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
+        <musicalobject:isEnvelopeOf rdf:resource="https://github.com/andreamust/music_note_pattern/blob/main/data.rdf#f_recording"/>
         <musicalobject:hasAttack rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</musicalobject:hasAttack>
         <musicalobject:hasDecay rdf:datatype="http://www.w3.org/2001/XMLSchema#int">024</musicalobject:hasDecay>
         <musicalobject:hasRelease rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</musicalobject:hasRelease>
