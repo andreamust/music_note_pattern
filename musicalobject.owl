@@ -215,9 +215,20 @@
     
 
 
-    <!-- https://purl.org/andreapoltronieri/musicalobject/hasFrequencyAplitude -->
+    <!-- https://purl.org/andreapoltronieri/musicalobject/hasDurationInSeconds -->
 
-    <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasFrequencyAplitude">
+    <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasDurationInSeconds">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">has duration in seconds</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/hasFrequencyMagnitude -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasFrequencyMagnitude">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Frequency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
@@ -319,7 +330,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasFrequencyAplitude"/>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasFrequencyMagnitude"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
@@ -352,15 +363,16 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasSoundIntensity"/>
-                <owl:allValuesFrom rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasFrequency"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/musicalobject/FundamentalFrequency"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasFrequency"/>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasSoundIntensity"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/musicalobject/FundamentalFrequency"/>
+                <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -391,6 +403,13 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/isDurationOf"/>
                 <owl:allValuesFrom rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasDurationInSeconds"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
