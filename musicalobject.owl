@@ -95,6 +95,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
+        <rdfs:comment xml:lang="en">Connects a musical object to its duration.</rdfs:comment>
         <rdfs:label xml:lang="en">has duration</rdfs:label>
     </owl:ObjectProperty>
     
@@ -107,6 +108,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
+        <rdfs:comment xml:lang="en">Connects a musical object to the envelope of the soundwave it produces.</rdfs:comment>
         <rdfs:label xml:lang="en">has envelope</rdfs:label>
     </owl:ObjectProperty>
     
@@ -118,6 +120,7 @@
         <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/musicalobject/isFrequencyOf"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Frequency"/>
+        <rdfs:comment xml:lang="en">Connects a musical object to the frequencies it produces.</rdfs:comment>
         <rdfs:label xml:lang="en">has frequency</rdfs:label>
     </owl:ObjectProperty>
     
@@ -131,6 +134,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+        <rdfs:comment xml:lang="en">Connects a musical object to the sound intensity produced.</rdfs:comment>
         <rdfs:label xml:lang="en">has sound intensity</rdfs:label>
     </owl:ObjectProperty>
     
@@ -143,6 +147,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:comment xml:lang="en">Inverse of hasDuration. Connects the duration of a musical event to the musical event itself.</rdfs:comment>
         <rdfs:label xml:lang="en">is duration of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -155,6 +160,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:comment xml:lang="en">Inverse of hasEvelope. Connects the envelope of a musical event to the musical event itself.</rdfs:comment>
         <rdfs:label xml:lang="en">is envelope of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -166,6 +172,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Frequency"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:comment xml:lang="en">Inverse of hasFrequency. Connects the frequency of a musical event to the musical event itself.</rdfs:comment>
         <rdfs:label xml:lang="en">is frequency of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -177,6 +184,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:comment xml:lang="en">Inverse of hasSoundIntensity. Connects the sound intensity of a musical event to the musical event itself.</rdfs:comment>
         <rdfs:label xml:lang="en">is sound intensity of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -198,7 +206,8 @@
     <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasAttack">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Describes the attack time (epressed in seconds) of the soundwave&apos;s envelope, according to the ADSR model.</rdfs:comment>
         <rdfs:label xml:lang="en">has attack</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -209,7 +218,8 @@
     <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasDecay">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Describes the decay time (epressed in seconds) of the soundwave&apos;s envelope, according to the ADSR model.</rdfs:comment>
         <rdfs:label xml:lang="en">has decay</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -221,6 +231,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Expresses the duration in seconds of a musical object.</rdfs:comment>
         <rdfs:label xml:lang="en">has duration in seconds</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -243,7 +254,8 @@
     <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasRelease">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Describes the release time (epressed in seconds) of the soundwave&apos;s envelope, according to the ADSR model.</rdfs:comment>
         <rdfs:label xml:lang="en">has release</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -254,7 +266,8 @@
     <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasSustain">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Describes the sustain time (epressed in seconds) of the soundwave&apos;s envelope, according to the ADSR model.</rdfs:comment>
         <rdfs:label xml:lang="en">has sustain</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -313,6 +326,7 @@
         <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
         <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
         <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+        <rdfs:comment xml:lang="en">The envelope of a musical object&apos;s soundwave. In physics and engineering, the envelope of an oscillating signal is a smooth curve outlining its extremes.</rdfs:comment>
         <rdfs:label xml:lang="en">Envelope</rdfs:label>
     </owl:Class>
     
@@ -338,6 +352,7 @@
         <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
         <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
         <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+        <rdfs:comment xml:lang="en">The frequency of a musical object.</rdfs:comment>
         <rdfs:label xml:lang="en">Frequency</rdfs:label>
     </owl:Class>
     
@@ -347,6 +362,7 @@
 
     <owl:Class rdf:about="https://purl.org/andreapoltronieri/musicalobject/FundamentalFrequency">
         <rdfs:subClassOf rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Frequency"/>
+        <rdfs:comment xml:lang="en">The foundamental frequency of a musical object. The fundamental frequency is defined as the frequency of the lowest constituing partial of a signal.</rdfs:comment>
         <rdfs:label xml:lang="en">Fundamental Frequency</rdfs:label>
     </owl:Class>
     
@@ -391,6 +407,7 @@
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
         <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+        <rdfs:comment xml:lang="en">A musical object is the result of the realisation of a set of instructions that the musician or a computer system uses to realise a piece of music (e.g. music notation).</rdfs:comment>
         <rdfs:label xml:lang="en">Musical Object</rdfs:label>
     </owl:Class>
     
@@ -413,6 +430,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+        <rdfs:comment xml:lang="en">The duration of a musical object.</rdfs:comment>
         <rdfs:label xml:lang="en">Musical Object Duration</rdfs:label>
     </owl:Class>
     
@@ -422,6 +440,7 @@
 
     <owl:Class rdf:about="https://purl.org/andreapoltronieri/musicalobject/PartialFrequency">
         <rdfs:subClassOf rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Frequency"/>
+        <rdfs:comment xml:lang="en">A frequency other than the foundamental Frequencyuency.</rdfs:comment>
         <rdfs:label xml:lang="en">Partial Frequency</rdfs:label>
     </owl:Class>
     
@@ -436,6 +455,7 @@
                 <owl:allValuesFrom rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The intensity of the sound produced by a musical object.</rdfs:comment>
         <rdfs:label xml:lang="en">Sound Intensity</rdfs:label>
     </owl:Class>
 </rdf:RDF>

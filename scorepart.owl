@@ -100,6 +100,7 @@ In this module are used as template the following Ontology Design Patterns:</rdf
         <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/scorepart/isSectionOf"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/#Section"/>
+        <rdfs:comment xml:lang="en">Connects the part of the score/symbolic notation to its constituing sections.</rdfs:comment>
         <rdfs:label xml:lang="en">has section</rdfs:label>
     </owl:ObjectProperty>
     
@@ -112,6 +113,7 @@ In this module are used as template the following Ontology Design Patterns:</rdf
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/#Voice"/>
+        <rdfs:comment xml:lang="en">Connects the part of the score/symbolic notation to its constituing sections.</rdfs:comment>
         <rdfs:label xml:lang="en">has voice</rdfs:label>
     </owl:ObjectProperty>
     
@@ -123,6 +125,7 @@ In this module are used as template the following Ontology Design Patterns:</rdf
         <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/scorepart/playsPart"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/Instrument"/>
+        <rdfs:comment xml:lang="en">Connects the part of the score/symbolic notation to the instrument that is assigned to play such part.</rdfs:comment>
         <rdfs:label xml:lang="en">is played by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -133,6 +136,7 @@ In this module are used as template the following Ontology Design Patterns:</rdf
     <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/scorepart/isSectionOf">
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/#Section"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
+        <rdfs:comment xml:lang="en">Inverse of hasSection. Connects the section of the score/symbolic notation to the belongng part.</rdfs:comment>
         <rdfs:label xml:lang="en">is section of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -144,6 +148,7 @@ In this module are used as template the following Ontology Design Patterns:</rdf
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/#Voice"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
+        <rdfs:comment xml:lang="en">Inverse of hasVoice. Connects the voice of the score/symbolic notation to the belongng part.</rdfs:comment>
         <rdfs:label xml:lang="en">is voice of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -154,6 +159,7 @@ In this module are used as template the following Ontology Design Patterns:</rdf
     <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/scorepart/playsPart">
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/Instrument"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
+        <rdfs:comment xml:lang="en">Inverse of isPlayedBy. Connects an instrument to the the part that the instrument plays.</rdfs:comment>
         <rdfs:label xml:lang="en">plays part</rdfs:label>
     </owl:ObjectProperty>
     
@@ -240,6 +246,7 @@ In this module are used as template the following Ontology Design Patterns:</rdf
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/scorepart/#Section"/>
         <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/scorepart/#Voice"/>
+        <rdfs:comment xml:lang="en">Any of various devices or contrivances that can be used to produce musical tones or sound. Any taxonomy can be used to subsume this concept. The default one is one extracted by Ivan Herman from the Musicbrainz instrument taxonomy, conforming to SKOS. This concept holds a seeAlso link towards this taxonomy.</rdfs:comment>
         <rdfs:label xml:lang="en">Instrument</rdfs:label>
     </owl:Class>
     
@@ -276,6 +283,7 @@ In this module are used as template the following Ontology Design Patterns:</rdf
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A part of a a score notation or a symbolic notation assigned to a specific instrument.</rdfs:comment>
         <rdfs:label xml:lang="en">Part</rdfs:label>
     </owl:Class>
     
@@ -315,6 +323,7 @@ In this module are used as template the following Ontology Design Patterns:</rdf
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A group of notes that share the same metric and clef.</rdfs:comment>
         <rdfs:label xml:lang="en">Section</rdfs:label>
     </owl:Class>
     
@@ -340,6 +349,7 @@ In this module are used as template the following Ontology Design Patterns:</rdf
                 <owl:allValuesFrom rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">One of several parts that can be performed within the same staff (e.g. alto and soprano).</rdfs:comment>
         <rdfs:label xml:lang="en">Voice</rdfs:label>
     </owl:Class>
 </rdf:RDF>
