@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://purl.org/andreapoltronieri/notepatterdata#"
-     xml:base="https://purl.org/andreapoltronieri/notepatterdata"
+<rdf:RDF xmlns="https://purl.org/andreapoltronieri/musicalobject/"
+     xml:base="https://purl.org/andreapoltronieri/musicalobject/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -8,20 +8,16 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:scorepart="https://purl.org/andreapoltronieri/scorepart/"
-     xmlns:notepattern="https://purl.org/andreapoltronieri/notepattern/"
-     xmlns:musicalobject="https://purl.org/andreapoltronieri/musicalobject/">
-    <owl:Ontology rdf:about="https://purl.org/andreapoltronieri/notepatterdata">
-        <owl:imports rdf:resource="https://purl.org/andreapoltronieri/notepattern"/>
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://purl.org/andreapoltronieri/musicalobject">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrea Poltronieri (University of Bologna)</dc:creator>
-        <dc:description xml:lang="en">Knowledge base containing a test unit for the Note Ontology Design Pattern.</dc:description>
+        <dc:description xml:lang="en">The Musical Object pattern models the acoustic features of a music note played in an actual performance.</dc:description>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dc:title xml:lang="en">2021-07-17</dc:title>
-        <dc:title xml:lang="en">Note Pattern KB</dc:title>
+        <dc:title xml:lang="en">Musical Object Pattern</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <rdfs:comment xml:lang="en">Knowledge base containing a test unit for the Note Ontology Design Pattern.</rdfs:comment>
-        <rdfs:label xml:lang="en">Note Pattern KB</rdfs:label>
+        <rdfs:comment xml:lang="en">The Musical Object pattern models the acoustic features of a music note played in an actual performance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Musical Object Pattern</rdfs:label>
         <owl:versionInfo xml:lang="en">Version 1.0</owl:versionInfo>
     </owl:Ontology>
     
@@ -30,7 +26,7 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Individuals
+    // Annotation properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -38,198 +34,430 @@
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/f_duration -->
+    <!-- http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/f_duration">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/notepattern/NoteDuration"/>
-        <notepattern:isApproximationOfDuration rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/mo_duration"/>
-        <notepattern:isDurationOfNote rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_note"/>
-        <rdfs:label xml:lang="en">quarter note</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate"/>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/f_dynamic -->
+    <!-- http://purl.org/dc/elements/1.1/creator -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/f_dynamic">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/notepattern/NoteDynamic"/>
-        <notepattern:isApproximationOfIntensity rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/mo_intensity"/>
-        <notepattern:isDynamicOf rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_note"/>
-        <notepattern:hasMidiVelocity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</notepattern:hasMidiVelocity>
-        <rdfs:label xml:lang="en">dynamic of the note f</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/f_note -->
+    <!-- http://purl.org/dc/elements/1.1/description -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/f_note">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/notepattern/F"/>
-        <notepattern:belongsToSection rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/section_1"/>
-        <notepattern:belongsToVoice rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/voice_1"/>
-        <notepattern:hasNoteDuration rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_duration"/>
-        <notepattern:hasNoteDynamic rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_dynamic"/>
-        <notepattern:hasNotePitch rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_pitch"/>
-        <notepattern:hasRealisation rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_recording"/>
-        <notepattern:belongsToMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</notepattern:belongsToMeasure>
-        <rdfs:label xml:lang="en">f5 note</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/f_pitch -->
+    <!-- http://purl.org/dc/elements/1.1/issued -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/f_pitch">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/notepattern/NotePitch"/>
-        <notepattern:isAbstractionOfFrequency rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/mo_freq_1"/>
-        <notepattern:isAbstractionOfFrequency rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/mo_freq_2"/>
-        <notepattern:isAbstractionOfFrequency rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/mo_freq_3"/>
-        <notepattern:isAbstractionOfFrequency rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/mo_freq_4"/>
-        <notepattern:isPitchOf rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_note"/>
-        <notepattern:hasMidiPitch rdf:datatype="http://www.w3.org/2001/XMLSchema#int">77</notepattern:hasMidiPitch>
-        <notepattern:isDefinedByOctave rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</notepattern:isDefinedByOctave>
-        <rdfs:label xml:lang="en">pitch of the note  f</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/issued"/>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/f_recording -->
+    <!-- http://purl.org/dc/elements/1.1/language -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/f_recording">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
-        <musicalobject:hasDuration rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/mo_duration"/>
-        <musicalobject:hasEnvelope rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/mo_envelope"/>
-        <musicalobject:hasFrequency rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/mo_freq_1"/>
-        <musicalobject:hasFrequency rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/mo_freq_2"/>
-        <musicalobject:hasFrequency rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/mo_freq_3"/>
-        <musicalobject:hasFrequency rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/mo_freq_4"/>
-        <musicalobject:hasSoundIntensity rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/mo_intensity"/>
-        <notepattern:isRealisationOf rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_note"/>
-    </owl:NamedIndividual>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/mo_duration -->
+    <!-- http://purl.org/dc/elements/1.1/title -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/mo_duration">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
-        <musicalobject:isDurationOf rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_recording"/>
-        <musicalobject:hasDurationInSeconds rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.6</musicalobject:hasDurationInSeconds>
-    </owl:NamedIndividual>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/mo_envelope -->
+    <!-- http://purl.org/dc/terms/license -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/mo_envelope">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
-        <musicalobject:isEnvelopeOf rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_recording"/>
-        <musicalobject:hasAttack rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</musicalobject:hasAttack>
-        <musicalobject:hasDecay rdf:datatype="http://www.w3.org/2001/XMLSchema#int">024</musicalobject:hasDecay>
-        <musicalobject:hasRelease rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</musicalobject:hasRelease>
-        <musicalobject:hasSustain rdf:datatype="http://www.w3.org/2001/XMLSchema#int">06</musicalobject:hasSustain>
-        <rdfs:label xml:lang="en">envelope</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/mo_freq_1 -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/mo_freq_1">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/musicalobject/FundamentalFrequency"/>
-        <musicalobject:isFrequencyOf rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_recording"/>
-        <musicalobject:hasFrequencyMagnitude rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2369</musicalobject:hasFrequencyMagnitude>
-        <rdfs:label xml:lang="en">704 Hz</rdfs:label>
-    </owl:NamedIndividual>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/mo_freq_2 -->
+    <!-- https://purl.org/andreapoltronieri/musicalobject/hasDuration -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/mo_freq_2">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/musicalobject/PartialFrequency"/>
-        <musicalobject:isFrequencyOf rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_recording"/>
-        <musicalobject:hasFrequencyMagnitude rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1060</musicalobject:hasFrequencyMagnitude>
-        <rdfs:label xml:lang="en">1410 Hz</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasDuration">
+        <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/musicalobject/isDurationOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
+        <rdfs:comment xml:lang="en">Connects a musical object to its duration.</rdfs:comment>
+        <rdfs:label xml:lang="en">has duration</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/mo_freq_3 -->
+    <!-- https://purl.org/andreapoltronieri/musicalobject/hasEnvelope -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/mo_freq_3">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/musicalobject/PartialFrequency"/>
-        <musicalobject:isFrequencyOf rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_recording"/>
-        <musicalobject:hasFrequencyMagnitude rdf:datatype="http://www.w3.org/2001/XMLSchema#int">103</musicalobject:hasFrequencyMagnitude>
-        <rdfs:label xml:lang="en">2127 Hz</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasEnvelope">
+        <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/musicalobject/isEnvelopeOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
+        <rdfs:comment xml:lang="en">Connects a musical object to the envelope of the soundwave it produces.</rdfs:comment>
+        <rdfs:label xml:lang="en">has envelope</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/mo_freq_4 -->
+    <!-- https://purl.org/andreapoltronieri/musicalobject/hasFrequency -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/mo_freq_4">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/musicalobject/PartialFrequency"/>
-        <musicalobject:isFrequencyOf rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_recording"/>
-        <musicalobject:hasFrequencyMagnitude rdf:datatype="http://www.w3.org/2001/XMLSchema#int">170</musicalobject:hasFrequencyMagnitude>
-        <rdfs:label xml:lang="en">2849 Hz</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasFrequency">
+        <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/musicalobject/isFrequencyOf"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Frequency"/>
+        <rdfs:comment xml:lang="en">Connects a musical object to the frequencies it produces.</rdfs:comment>
+        <rdfs:label xml:lang="en">has frequency</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/mo_intensity -->
+    <!-- https://purl.org/andreapoltronieri/musicalobject/hasSoundIntensity -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/mo_intensity">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
-        <musicalobject:isSoundIntensityOf rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_recording"/>
-    </owl:NamedIndividual>
+    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasSoundIntensity">
+        <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/musicalobject/isSoundIntensityOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+        <rdfs:comment xml:lang="en">Connects a musical object to the sound intensity produced.</rdfs:comment>
+        <rdfs:label xml:lang="en">has sound intensity</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/part_1 -->
+    <!-- https://purl.org/andreapoltronieri/musicalobject/isDurationOf -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/part_1">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
-        <scorepart:hasSection rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/section_1"/>
-        <scorepart:hasVoice rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/voice_1"/>
-        <scorepart:isPlayedBy rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/piano_instrument"/>
-        <scorepart:hasStaff rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</scorepart:hasStaff>
-        <rdfs:label xml:lang="en">part 1</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/isDurationOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
+        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:comment xml:lang="en">Inverse of hasDuration. Connects the duration of a musical event to the musical event itself.</rdfs:comment>
+        <rdfs:label xml:lang="en">is duration of</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/piano_instrument -->
+    <!-- https://purl.org/andreapoltronieri/musicalobject/isEnvelopeOf -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/piano_instrument">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/scorepart/Instrument"/>
-        <scorepart:playsPart rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/part_1"/>
-        <scorepart:hasMidiProgram rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</scorepart:hasMidiProgram>
-        <rdfs:label xml:lang="en">grand piano</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/isEnvelopeOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
+        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:comment xml:lang="en">Inverse of hasEvelope. Connects the envelope of a musical event to the musical event itself.</rdfs:comment>
+        <rdfs:label xml:lang="en">is envelope of</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/section_1 -->
+    <!-- https://purl.org/andreapoltronieri/musicalobject/isFrequencyOf -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/section_1">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/scorepart/#Section"/>
-        <notepattern:groupsNoteEvent rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_note"/>
-        <scorepart:isSectionOf rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/part_1"/>
-        <scorepart:hasClef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">violin</scorepart:hasClef>
-        <rdfs:label xml:lang="en">section 1</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/isFrequencyOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Frequency"/>
+        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:comment xml:lang="en">Inverse of hasFrequency. Connects the frequency of a musical event to the musical event itself.</rdfs:comment>
+        <rdfs:label xml:lang="en">is frequency of</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepatterdata/voice_1 -->
+    <!-- https://purl.org/andreapoltronieri/musicalobject/isSoundIntensityOf -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/andreapoltronieri/notepatterdata/voice_1">
-        <rdf:type rdf:resource="https://purl.org/andreapoltronieri/scorepart/#Voice"/>
-        <notepattern:containsNoteEvent rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/f_note"/>
-        <scorepart:isVoiceOf rdf:resource="https://purl.org/andreapoltronieri/notepatterdata/part_1"/>
-        <rdfs:label xml:lang="en">voice 1</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/isSoundIntensityOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:comment xml:lang="en">Inverse of hasSoundIntensity. Connects the sound intensity of a musical event to the musical event itself.</rdfs:comment>
+        <rdfs:label xml:lang="en">is sound intensity of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/hasAttack -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasAttack">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Describes the attack time (epressed in seconds) of the soundwave&apos;s envelope, according to the ADSR model.</rdfs:comment>
+        <rdfs:label xml:lang="en">has attack</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/hasDecay -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasDecay">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Describes the decay time (epressed in seconds) of the soundwave&apos;s envelope, according to the ADSR model.</rdfs:comment>
+        <rdfs:label xml:lang="en">has decay</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/hasDurationInSeconds -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasDurationInSeconds">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Expresses the duration in seconds of a musical object.</rdfs:comment>
+        <rdfs:label xml:lang="en">has duration in seconds</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/hasFrequencyMagnitude -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasFrequencyMagnitude">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Frequency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The amplitude of a frequency component of a complex sound.</rdfs:comment>
+        <rdfs:label xml:lang="en">has frequency amplitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/hasRelease -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasRelease">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Describes the release time (epressed in seconds) of the soundwave&apos;s envelope, according to the ADSR model.</rdfs:comment>
+        <rdfs:label xml:lang="en">has release</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/hasSustain -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/musicalobject/hasSustain">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Describes the sustain time (epressed in seconds) of the soundwave&apos;s envelope, according to the ADSR model.</rdfs:comment>
+        <rdfs:label xml:lang="en">has sustain</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/Envelope -->
+
+    <owl:Class rdf:about="https://purl.org/andreapoltronieri/musicalobject/Envelope">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/isEnvelopeOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasAttack"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasDecay"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasRelease"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasSustain"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Frequency"/>
+        <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
+        <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+        <rdfs:comment xml:lang="en">The envelope of a musical object&apos;s soundwave. In physics and engineering, the envelope of an oscillating signal is a smooth curve outlining its extremes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Envelope</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/Frequency -->
+
+    <owl:Class rdf:about="https://purl.org/andreapoltronieri/musicalobject/Frequency">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/isFrequencyOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasFrequencyMagnitude"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
+        <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+        <rdfs:comment xml:lang="en">The frequency of a musical object.</rdfs:comment>
+        <rdfs:label xml:lang="en">Frequency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/FundamentalFrequency -->
+
+    <owl:Class rdf:about="https://purl.org/andreapoltronieri/musicalobject/FundamentalFrequency">
+        <rdfs:subClassOf rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Frequency"/>
+        <rdfs:comment xml:lang="en">The foundamental frequency of a musical object. The fundamental frequency is defined as the frequency of the lowest constituing partial of a signal.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fundamental Frequency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/MusicalObject -->
+
+    <owl:Class rdf:about="https://purl.org/andreapoltronieri/musicalobject/MusicalObject">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasFrequency"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/andreapoltronieri/musicalobject/PartialFrequency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasFrequency"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/musicalobject/FundamentalFrequency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasSoundIntensity"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasDuration"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasEnvelope"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Envelope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration"/>
+        <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+        <rdfs:comment xml:lang="en">A musical object is the result of the realisation of a set of instructions that the musician or a computer system uses to realise a piece of music (e.g. music notation).</rdfs:comment>
+        <rdfs:label xml:lang="en">Musical Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration -->
+
+    <owl:Class rdf:about="https://purl.org/andreapoltronieri/musicalobject/MusicalObjectDuration">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/isDurationOf"/>
+                <owl:allValuesFrom rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/hasDurationInSeconds"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity"/>
+        <rdfs:comment xml:lang="en">The duration of a musical object.</rdfs:comment>
+        <rdfs:label xml:lang="en">Musical Object Duration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/PartialFrequency -->
+
+    <owl:Class rdf:about="https://purl.org/andreapoltronieri/musicalobject/PartialFrequency">
+        <rdfs:subClassOf rdf:resource="https://purl.org/andreapoltronieri/musicalobject/Frequency"/>
+        <rdfs:comment xml:lang="en">A frequency other than the foundamental Frequencyuency.</rdfs:comment>
+        <rdfs:label xml:lang="en">Partial Frequency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/musicalobject/SoundIntensity -->
+
+    <owl:Class rdf:about="https://purl.org/andreapoltronieri/musicalobject/SoundIntensity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/musicalobject/isSoundIntensityOf"/>
+                <owl:allValuesFrom rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The intensity of the sound produced by a musical object.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sound Intensity</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
