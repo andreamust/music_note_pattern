@@ -23,6 +23,7 @@
         <coversRequirements xml:lang="en">what is the name of a note?, what part of the score does a note belong to?, what are the dynamic indications referring to a note in the score?, what is the fundamental frequency of a note?, what are the different frequencies that make up the spectrum of a note?, what is the duration in seconds of a note, in a given performance?, how is the envelope of a note shaped?</coversRequirements>
         <hasComponent rdf:resource="http://purl.org/net/nary-relation"/>
         <hasComponent rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl"/>
+        <hasIntent xml:lang="en">The Music Note ODP models a symbolic note and its symbolic attributes.</hasIntent>
         <hasUnitTest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SELECT ?note ?accidental
 WHERE {?note rdf:type ?type.
   ?type rdfs:subClassOf* np:SymbolicNote
@@ -269,6 +270,7 @@ WHERE {{?note np:belongsToVoice ?voice.
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/notepattern/SymbolicNote"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/notepattern/NoteDuration"/>
+        <rdfs:comment xml:lang="en">Connects a symbolic note to its symbolic quantised duration.</rdfs:comment>
         <rdfs:label xml:lang="en">has note duration</rdfs:label>
     </owl:ObjectProperty>
     
@@ -281,6 +283,7 @@ WHERE {{?note np:belongsToVoice ?voice.
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/notepattern/SymbolicNote"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/notepattern/NoteDynamic"/>
+        <rdfs:comment xml:lang="en">Connects a symbolic note to its symbolic dynamic.</rdfs:comment>
         <rdfs:label xml:lang="en">has note dynamic</rdfs:label>
     </owl:ObjectProperty>
     
@@ -293,6 +296,7 @@ WHERE {{?note np:belongsToVoice ?voice.
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/notepattern/SymbolicNote"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/notepattern/NotePitch"/>
+        <rdfs:comment xml:lang="en">Connects a symbolic note to its symbolic pitch.</rdfs:comment>
         <rdfs:label xml:lang="en">has note pitch</rdfs:label>
     </owl:ObjectProperty>
     
@@ -304,6 +308,7 @@ WHERE {{?note np:belongsToVoice ?voice.
         <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/notepattern/isRealisationOf"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/notepattern/SymbolicNote"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
+        <rdfs:comment xml:lang="en">Connects a symbolic note to its corresponding musical object, which is the realisation o f such symbolic note in a particular performance.</rdfs:comment>
         <rdfs:label xml:lang="en">has realisation</rdfs:label>
     </owl:ObjectProperty>
     
@@ -344,6 +349,7 @@ WHERE {{?note np:belongsToVoice ?voice.
     <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/notepattern/isDurationOfNote">
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/notepattern/NoteDuration"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/notepattern/SymbolicNote"/>
+        <rdfs:comment xml:lang="en">Inverse of hasNoteDuration. Connects a duration class to the symbolic note that have this specific duration.</rdfs:comment>
         <rdfs:label xml:lang="en">is duration of note</rdfs:label>
     </owl:ObjectProperty>
     
@@ -354,6 +360,7 @@ WHERE {{?note np:belongsToVoice ?voice.
     <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/notepattern/isDynamicOf">
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/notepattern/NoteDynamic"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/notepattern/SymbolicNote"/>
+        <rdfs:comment xml:lang="en">Inverse of hasNoteDynamic. Connects a duration class to the symbolic note that have this specific dynamic.</rdfs:comment>
         <rdfs:label xml:lang="en">is dynamic of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -364,6 +371,7 @@ WHERE {{?note np:belongsToVoice ?voice.
     <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/notepattern/isPitchOf">
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/notepattern/NotePitch"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/notepattern/SymbolicNote"/>
+        <rdfs:comment xml:lang="en">Inverse of hasNotePitch. Connects a duration class to the symbolic note that have this specific pitch.</rdfs:comment>
         <rdfs:label xml:lang="en">is pitch of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -374,6 +382,7 @@ WHERE {{?note np:belongsToVoice ?voice.
     <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/notepattern/isRealisationOf">
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/musicalobject/MusicalObject"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/notepattern/SymbolicNote"/>
+        <rdfs:comment xml:lang="en">Inverse of hasRealisation. Connects a musical object to the music symbolic music note of the same composition.</rdfs:comment>
         <rdfs:label xml:lang="en">is realisation of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -584,6 +593,7 @@ WHERE {{?note np:belongsToVoice ?voice.
                 <owl:allValuesFrom rdf:resource="https://purl.org/andreapoltronieri/notepattern/SymbolicNote"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The quantised duration of a symbolic music note.</rdfs:comment>
         <rdfs:label xml:lang="en">Note Duration</rdfs:label>
     </owl:Class>
     
@@ -618,6 +628,7 @@ WHERE {{?note np:belongsToVoice ?voice.
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The dynamic of a symbolic note.</rdfs:comment>
         <rdfs:label xml:lang="en">Note Dynamic</rdfs:label>
     </owl:Class>
     
@@ -638,6 +649,7 @@ WHERE {{?note np:belongsToVoice ?voice.
                 <owl:allValuesFrom rdf:resource="https://purl.org/andreapoltronieri/notepattern/SymbolicNote"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The pitch of a symbolic note.</rdfs:comment>
         <rdfs:label xml:lang="en">Note Pitch</rdfs:label>
     </owl:Class>
     
@@ -687,6 +699,7 @@ WHERE {{?note np:belongsToVoice ?voice.
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A music note from the western temperament system.</rdfs:comment>
         <rdfs:label xml:lang="en">Note Event</rdfs:label>
     </owl:Class>
 </rdf:RDF>
