@@ -191,7 +191,6 @@ In this module are used as template the following Ontology Design Patterns:</rdf
 
     <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/scorepart#hasSection">
         <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/scorepart#isSectionOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart#Section"/>
         <rdfs:label xml:lang="en">has section</rdfs:label>
@@ -372,6 +371,7 @@ In this module are used as template the following Ontology Design Patterns:</rdf
                 <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://purl.org/andreapoltronieri/scorepart/Instrument"/>
         <rdfs:comment xml:lang="en">A section as defined by the repetition signs found on the music score.</rdfs:comment>
         <rdfs:label xml:lang="en">Section</rdfs:label>
     </owl:Class>
