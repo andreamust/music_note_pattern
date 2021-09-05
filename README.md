@@ -19,4 +19,4 @@ Music Note Ontology Design Pattern
 ## SPARQL Queries
 
 For each of the Competency questions listed abouve we provide the relative SPARQL queries. 
-All the SPAQRL queries are available in the folder [SPARQL_queries](tree/main/SPARQL_queries)
+All the SPAQRL queries are available in the folder [SPARQL_queries](https://github.com/andreamust/music_note_pattern/tree/main/SPARQL_queries)
