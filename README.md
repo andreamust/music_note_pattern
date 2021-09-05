@@ -1,4 +1,4 @@
-# music_note_pattern
+# Music Note Ontology
 Music Note Ontology Design Pattern
 
 ## Competency questions
