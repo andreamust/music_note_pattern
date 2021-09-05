@@ -290,6 +290,18 @@ In this module are used as template the following Ontology Design Patterns:</rdf
     
 
 
+    <!-- https://purl.org/andreapoltronieri/scorepart#hasTempo -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/scorepart#hasTempo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/#HomogeneousFragment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The tempo of an homogeneous fragment, expressed in bpm (integer).</rdfs:comment>
+        <rdfs:label xml:lang="en">has tempo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://purl.org/andreapoltronieri/scorepart/hasClef -->
 
     <owl:DatatypeProperty rdf:about="https://purl.org/andreapoltronieri/scorepart/hasClef">
@@ -457,6 +469,13 @@ In this module are used as template the following Ontology Design Patterns:</rdf
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/scorepart/isFragmentOf"/>
                 <owl:allValuesFrom rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/scorepart#hasTempo"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
