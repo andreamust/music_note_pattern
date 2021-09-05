@@ -1,0 +1,4 @@
+SELECT ?note ?literalDynamic ?midiVelocity
+WHERE {?note np:hasNoteDynamic ?noteDynamic. 
+  ?noteDynamic np:hasMidiVelocity ?midiVelocity 
+  OPTIONAL {?noteDynamic np:hasLiteralDynamic ?literalDynamic}}

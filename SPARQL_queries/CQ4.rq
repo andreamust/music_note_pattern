@@ -1,0 +1,4 @@
+SELECT ?note ?foundamFreq
+WHERE {?note np:hasRealisation ?musicalObj .  
+  ?musicalObj mop:hasFrequency ?foundamFreq . 
+  ?foundamFreq a mop:FundamentalFrequency.}

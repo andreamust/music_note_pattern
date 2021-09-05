@@ -1,0 +1,5 @@
+SELECT DISTINCT ?note ?part
+WHERE {{?note np:belongsToVoice ?voice. 
+   ?voice spp:isVoiceOf ?part} 
+  UNION {?note np:belongsToSection ?section. 
+    ?section spp:isSectionOf ?part}}

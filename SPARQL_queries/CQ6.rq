@@ -1,0 +1,4 @@
+SELECT ?note ?durationSec
+WHERE {?note np:hasRealisation ?musicalObj .  
+  ?musicalObj mop:hasDuration ?duration . 
+  ?duration mop:hasDurationInSeconds ?durationSec}
