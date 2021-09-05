@@ -4,6 +4,7 @@ Music Note Ontology Design Pattern
 ## Competency questions
 
 | Id | Competency Question |
+|----|---------------------|
 | CQ1 | |
 | CQ2 | |
 | CQ3 | |
