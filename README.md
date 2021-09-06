@@ -13,8 +13,11 @@ Music Note Ontology Design Pattern
 | CQ6 | what is the duration in seconds of a note, in a given performance? |
 | CQ7 | how is the envelope of a note shaped? |
 | CQ8 | what is the sound intensity of the notes played by a specific voice? |
-| CQ9 | |
-| CQ10 | |
+| CQ9 | what is the MIDI pitch of a musical object having a specific frequency? |
+| CQ10 | what is the decay time of the execution of a note? |
+| CQ11 | which are the accidental of the notes present in a score part? |
+| CQ12 | what is the duration in seconds of the notes played by a specific instrument? |
+| CQ13 | what is the MIDI velocity of a played note in a given performance? |
 
 ## SPARQL Queries
 
