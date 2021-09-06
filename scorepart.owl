@@ -19,6 +19,7 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <cpannotationschema:coversRequirements xml:lang="en">What is the instrument playing a specific score part?, How many voices does the score part have?, Which are the metrics defining the sections of the score part?</cpannotationschema:coversRequirements>
         <cpannotationschema:extractedFrom rdf:resource="https://purl.org/andreapoltronieri/notepattern"/>
+        <cpannotationschema:hasComponent rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
         <cpannotationschema:hasIntent xml:lang="en">This content ODP formalises the structure and the hierarchies of a music score/symbolic representation system.</cpannotationschema:hasIntent>
         <cpannotationschema:reengineeredFrom rdf:resource="https://purl.org/andreapoltronieri/HaMSEontology"/>
         <rdfs:comment xml:lang="en">The Score Part pattern models the structure and the hierarchies of a music score.
@@ -187,27 +188,6 @@ In this module are used as template the following Ontology Design Patterns:</rdf
     
 
 
-    <!-- https://purl.org/andreapoltronieri/scorepart#hasSection -->
-
-    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/scorepart#hasSection">
-        <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/scorepart#isSectionOf"/>
-        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
-        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/Section"/>
-        <rdfs:label xml:lang="en">has section</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://purl.org/andreapoltronieri/scorepart#isSectionOf -->
-
-    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/scorepart#isSectionOf">
-        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/Section"/>
-        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
-        <rdfs:label xml:lang="en">is section of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://purl.org/andreapoltronieri/scorepart/hasFragment -->
 
     <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/scorepart/hasFragment">
@@ -215,6 +195,17 @@ In this module are used as template the following Ontology Design Patterns:</rdf
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/HomogeneousFragment"/>
         <rdfs:comment xml:lang="en">Connects the part of the score/symbolic notation to its constituing sections.</rdfs:comment>
+        <rdfs:label xml:lang="en">has section</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/scorepart/hasSection -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/scorepart/hasSection">
+        <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/scorepart/isSectionOf"/>
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
+        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/Section"/>
         <rdfs:label xml:lang="en">has section</rdfs:label>
     </owl:ObjectProperty>
     
@@ -252,6 +243,16 @@ In this module are used as template the following Ontology Design Patterns:</rdf
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/Instrument"/>
         <rdfs:comment xml:lang="en">Connects the part of the score/symbolic notation to the instrument that is assigned to play such part.</rdfs:comment>
         <rdfs:label xml:lang="en">is played by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/andreapoltronieri/scorepart/isSectionOf -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/scorepart/isSectionOf">
+        <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/Section"/>
+        <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
+        <rdfs:label xml:lang="en">is section of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -431,16 +432,16 @@ In this module are used as template the following Ontology Design Patterns:</rdf
     <owl:Class rdf:about="https://purl.org/andreapoltronieri/scorepart/Part">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/scorepart#hasSection"/>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/scorepart/hasFragment"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/scorepart/Section"/>
+                <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/scorepart/HomogeneousFragment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/scorepart/hasFragment"/>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/scorepart/hasSection"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/scorepart/HomogeneousFragment"/>
+                <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/scorepart/Section"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -478,7 +479,7 @@ In this module are used as template the following Ontology Design Patterns:</rdf
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://purl.org/andreapoltronieri/scorepart/Part"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/scorepart#hasSection"/>
+                        <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/scorepart/hasSection"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                         <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/scorepart/Section"/>
                     </owl:Restriction>
@@ -487,7 +488,7 @@ In this module are used as template the following Ontology Design Patterns:</rdf
         </owl:equivalentClass>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/scorepart#isSectionOf"/>
+                <owl:onProperty rdf:resource="https://purl.org/andreapoltronieri/scorepart/isSectionOf"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://purl.org/andreapoltronieri/scorepart/Part"/>
             </owl:Restriction>
