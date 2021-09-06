@@ -1,0 +1,4 @@
+SELECT ?note ?accidental
+WHERE {?note rdf:type ?type.
+  ?type rdfs:subClassOf* np:SymbolicNote
+  OPTIONAL {?note np:hasAccidental ?accidental}}
