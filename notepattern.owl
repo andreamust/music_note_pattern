@@ -235,7 +235,7 @@ WHERE {{?note np:belongsToVoice ?voice.
     <!-- https://purl.org/andreapoltronieri/notepattern/belongsToSection -->
 
     <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/notepattern/belongsToSection">
-        <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/notepattern/containsNoteEvent"/>
+        <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/notepattern/containsSymbolicNote"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/notepattern/SymbolicNote"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/Section"/>
@@ -247,7 +247,7 @@ WHERE {{?note np:belongsToVoice ?voice.
     <!-- https://purl.org/andreapoltronieri/notepattern/belongsToVoice -->
 
     <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/notepattern/belongsToVoice">
-        <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/notepattern/containsNoteEvent"/>
+        <owl:inverseOf rdf:resource="https://purl.org/andreapoltronieri/notepattern/containsSymbolicNote"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/notepattern/SymbolicNote"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/scorepart/Voice"/>
@@ -256,13 +256,13 @@ WHERE {{?note np:belongsToVoice ?voice.
     
 
 
-    <!-- https://purl.org/andreapoltronieri/notepattern/containsNoteEvent -->
+    <!-- https://purl.org/andreapoltronieri/notepattern/containsSymbolicNote -->
 
-    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/notepattern/containsNoteEvent">
+    <owl:ObjectProperty rdf:about="https://purl.org/andreapoltronieri/notepattern/containsSymbolicNote">
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/Section"/>
         <rdfs:domain rdf:resource="https://purl.org/andreapoltronieri/scorepart/Voice"/>
         <rdfs:range rdf:resource="https://purl.org/andreapoltronieri/notepattern/SymbolicNote"/>
-        <rdfs:label xml:lang="en">contains note event</rdfs:label>
+        <rdfs:label xml:lang="en">contains symbolic note</rdfs:label>
     </owl:ObjectProperty>
     
 
