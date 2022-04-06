@@ -10,6 +10,12 @@ the event represented by a score or symbolic notation. To do this, the proposed
 ontology represents both the elements and the typical hierarchies of a score,
 describing all its attributes. In addition, the ontology models the realisation of
 a note, describing its physical characteristics in a given performance.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/44606182/162047924-8caf3212-d9af-4a3c-8a98-b96154298867.svg" alt="Music Note Ontology" width="700"/>
+</p>
+
+The work is a refinement of the preliminary ontology proposed [here](https://github.com/andreamust/HaMSE_Ontology). 
+
 ## Ontology Design
 
 Ontology was modeled following the principles of [Ontology Design Patterns](http://ontologydesignpatterns.org/wiki/Main_Page) and 
@@ -41,10 +47,16 @@ The Ontology is designed as the union of three different Ontology Design Pattern
 ### The Score Part Pattern
 The hierarchy (i.e. the mereological structure) of a music score is described
 by the [Score Part Pattern](https://purl.org/andreapoltronieri/scorepart).
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/44606182/162048052-745f0d97-101d-4c6c-bb5a-5bc739aa4ae0.png" alt="Score Part Pattern" width="450"/>
+</p>
 ### The Musical Object Pattern
 The [Musical Object Pattern](https://purl.org/andreapoltronieri/) models the physical features of a musical note object, i.e. the execution of a note. 
-Specifically, this pattern models the physical characteristics that can be extracted from the sound wave produced by an instrument playing a musical note
+Specifically, this pattern models the physical characteristics that can be extracted from the sound wave produced by an instrument playing a musical note.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/44606182/162048249-723b4003-ec51-4ed3-add8-94bd48e41c9f.png" alt="Musical Object Pattern" width="550"/>
+</p>
 
 ### The Music Note Pattern
 
@@ -55,6 +67,10 @@ that it is possible to represent with this pattern music that was originally enc
 in other formats. To do so, the pattern proposed describes each symbolic notes
 both by means of the standard music score notation and by using the MIDI
 reference for each of the notes’s attributes.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/44606182/162048380-800e07bf-4aa8-4333-89af-434e8be5ac08.png" alt="Music Note Pattern" width="550"/>
+</p>
 
 
 ## SPARQL Queries
